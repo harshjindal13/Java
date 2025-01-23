@@ -15,6 +15,7 @@ public class harsh {
     // System.out.println(name + surname);
 
     // CONSTANTS --> USE "final" keyword to make any variable constant.
+    // use CAPITAL letters for the constants.
 
     int year = 2000;
     year = 2001;
@@ -22,12 +23,12 @@ public class harsh {
 
     System.out.println(year);
 
-    final int age = 10;
-    // age = 11;
+    final int AGE = 10;
+    // AGE = 11;
 
     //  this lines throughs an error.
 
-    System.out.println(age);
+    System.out.println(AGE);
 
   }
 }
