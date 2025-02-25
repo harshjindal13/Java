@@ -9,8 +9,12 @@ public class input {
       // String name = sc.next();
       // System.out.println("Your name is: " + name);
 
-      // taking input of numbers from the user and return their addition:
+      //Displaying a Full line.
+      System.out.println("Enter your string: ");
+      String para = sc.nextLine();
+      System.out.println(para);
 
+      // taking input of numbers from the user and return their addition:
       
       // System.out.println("Enter your number: ");
       int num1 = sc.nextInt();
