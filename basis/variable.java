@@ -1,6 +1,6 @@
 package basis;
 
-public class harsh {
+public class variable {
   public static void main(String[] args) {
     // System.out.println("harsh was here \n");
     // System.out.println("hello");
