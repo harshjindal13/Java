@@ -92,32 +92,45 @@ class patter_1{
         
   }
   
+  static void halfDiamond(int size){
+    for (int i = 0; i <= 2*size - 1; i++) {
+      int stars = i;
+      if(i > size) stars = 2*size - i;  
+      for (int j = 1; j <= stars; j++) {
+            System.out.print('*');
+        }System.out.println();
+    }
+  }
   
   
   public static void main(String[] args) {
     int size = 5;  
 
-    rec(size);
-    System.out.println("\n");
+    // rec(size);
+    // System.out.println("\n");
     
-    rightT(size);
-    System.out.println("\n");
+    // rightT(size);
+    // System.out.println("\n");
     
-    rightTNum(size);
-    System.out.println("\n");
+    // rightTNum(size);
+    // System.out.println("\n");
     
-    rightTRowNum(size);
-    System.out.println("\n");
+    // rightTRowNum(size);
+    // System.out.println("\n");
     
-    reverseRightT(size);
-    System.out.println("\n");
+    // reverseRightT(size);
+    // System.out.println("\n");
     
-    reverseNumberRightTadd(size);
-    System.out.println("\n");
+    // reverseNumberRightTadd(size);
+    // System.out.println("\n");
     
-    pyramid(size);
-    System.out.println("\n");
+    // pyramid(size);
+    // System.out.println("\n");
     
-    reversePyramid(size);
+    // reversePyramid(size);
+    // System.out.println("\n");
+
+    halfDiamond(size);
+
   }
 }
