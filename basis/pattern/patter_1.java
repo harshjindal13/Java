@@ -102,7 +102,23 @@ class patter_1{
     }
   }
   
-  
+  static void binRightT(int size){
+    int start; 
+    for (int i = 0; i < size; i++) {
+      
+      if(i % 2 == 0) start = 1;
+      else start = 0;
+      
+      for(int j = 0; j <= i; j++){
+        System.out.print(start);
+      
+        start = 1-start;
+      
+      }System.out.println();
+        
+    }
+  }
+
   public static void main(String[] args) {
     int size = 5;  
 
@@ -130,7 +146,10 @@ class patter_1{
     // reversePyramid(size);
     // System.out.println("\n");
 
-    halfDiamond(size);
+    // halfDiamond(size);
+    // System.out.println("\n");
+
+    binRightT(size);
 
   }
 }
