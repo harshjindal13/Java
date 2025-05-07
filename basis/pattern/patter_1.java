@@ -235,10 +235,124 @@ class patter_1{
     }
   }
   
+  static void dickChRightT(int size){
+    for (int i = 0; i <= size; i++) {
+      char ch = 'A';
+      ch+=size-1;
+      for (int j = 0; j < i; j++) {
+        System.out.print(ch + " ");
+        ch--;
+      }System.out.println();
+    }
+  }
+
+  static void hollowDiamond(int size){
+    for (int i = 0; i < size; i++) {
+     
+    //part-1 
+
+      //star
+      for (int j = 0; j < size-i; j++) {
+        System.out.print('*');
+      }
+
+      //space
+      for (int j = 0; j < 2*i; j++) {
+        System.out.print(' ');
+      }
+
+      //star
+      for (int j = 0; j < size-i; j++) {
+        System.out.print('*');
+      }System.out.println();
+    }
+
+  
+    // part-2
+    for (int i = 0; i < size; i++) {
+
+      //star
+      for (int j = 0; j <= i; j++) {
+        System.out.print('*');
+      }
+
+      //space
+      for (int j = 0; j < (2*(size-i))-2; j++) {
+        System.out.print(' ');
+      }
+
+      for (int j = i; j >= 0; j--) {
+        System.out.print('*');
+      }System.out.println();
+    
+    }
+  }
+
+  static void butterFly(int size){
+    for (int i = 0; i < size; i++) {
+
+      //star
+      for (int j = 0; j <= i; j++) {
+        System.out.print('*');
+      }
+
+      //space
+      for (int j = 0; j < (2*(size-i)-2); j++) {
+        System.out.print(' ');
+      }
+
+      //star
+      for (int j = i; j >= 0; j--) {
+        System.out.print('*');
+      }System.out.println();
+        
+    }
+
+    for (int i = 1; i < size; i++) {
+
+      //star
+      for (int j = 0; j < size-i; j++) {
+        System.out.print('*');
+      }
+
+      //space
+      for (int j = 0; j < 2*i; j++) {
+        System.out.print(' ');
+      }
+
+      //star
+      for (int j = 0; j < size-i; j++) {
+        System.out.print('*');
+      }System.out.println();
+    }
+  }
+
+  static void hollowRec(int size){
+    for (int i = 0; i < size; i++) {
+      String space; 
+      for (int j = 0; j < size; j++) {
+        if(i == 0 || i == size-1 || j == 0 || j == size-1) space = "*";
+        else space = " ";
+        System.out.print(space);
+      }System.out.println();
+      System.out.println("\n");
+    }
+  }
+
+  static void numSquare(int size){
+    int num = size;
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        System.out.print(num);
+        if(i == j) num -= 1;
+      }System.out.println();
+    }
+  }
+
   public static void main(String[] args) {
     int size = 5;  
 
-    mirrorChPyr(size);
+    numSquare(size);
 
   }
 }
