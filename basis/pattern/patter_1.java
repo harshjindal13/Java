@@ -6,10 +6,11 @@ class patter_1{
     for(int i = 0; i < size; i++){
       for (int j = 0; j < size; j++) {
           System.out.print("* ");
+        }
       }
       System.out.println();
     }
-  }
+  
 
   static void rightT(int size){
     for (int i = 0; i < size; i++) {
@@ -147,41 +148,97 @@ class patter_1{
     }
   }
 
+  static void continueNumRightT(int size){
+    int count = 1;
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j <= i; j++){
+        System.out.print(count + " ");
+
+        count++;
+      }System.out.println();
+    }
+  }
+
+  static void alphaRightT(int size){
+
+    for (int i = 0; i <= size; i++) {
+      char alpha = 'A';
+      for (int j = 0; j < i; j++) {
+        System.out.print(alpha);
+
+        alpha++;
+      }System.out.println();
+
+    }
+  }
+
+  static void reverseAlphaRightT(int size){
+
+    for (int i = size; i > 0; i--) {
+      char alpha = 'A';
+      for (int j = 0; j < i; j++) {
+        System.out.print(alpha);
+
+        alpha++;
+      }System.out.println();
+
+    }
+  }
+
+  static void reverseAlphaRightT_1(int size){
+
+    for (int i = 0; i < size; i++) {
+      char alpha = 'A';
+      for(int j = 0; j < (size-i); j++){
+        System.out.print(alpha);
+
+        alpha++;
+      }System.out.println();
+        
+    }
+  }
+
+  static void sameChRightT(int size){
+
+    char ch = 'A';
+    for (int i = 1; i <= size; i++) {
+      for (int j = 0; j < i; j++) {
+        System.out.print(ch);
+
+      }System.out.println();
+      ch++;
+    }
+  }
+
+  static void mirrorChPyr(int size){
+    for (int i = 0; i < size; i++) {
+      char ch = 'A';
+
+      //space
+      for (int j = 0; j < size-i; j++) {
+        System.out.print(' ');
+      }
+
+      //ch
+      for (int j = 0; j < i; j++) {
+        System.out.print(ch);
+        ch++;
+      }
+      
+      //ch2
+      for (int j = i; j >= 0; j--) {
+        System.out.print(ch);
+        ch--;
+      }
+
+      System.out.println();
+    }
+  }
+  
   public static void main(String[] args) {
     int size = 5;  
 
-    // rec(size);
-    // System.out.println("\n");
-    
-    // rightT(size);
-    // System.out.println("\n");
-    
-    // rightTNum(size);
-    // System.out.println("\n");
-    
-    // rightTRowNum(size);
-    // System.out.println("\n");
-    
-    // reverseRightT(size);
-    // System.out.println("\n");
-    
-    // reverseNumberRightTadd(size);
-    // System.out.println("\n");
-    
-    // pyramid(size);
-    // System.out.println("\n");
-    
-    // reversePyramid(size);
-    // System.out.println("\n");
-
-    // halfDiamond(size);
-    // System.out.println("\n");
-    
-    // binRightT(size);
-    // System.out.println("\n");
-    
-    // numCrown(size);
-    // System.out.println("\n");
+    mirrorChPyr(size);
 
   }
 }
