@@ -1,5 +1,7 @@
 package basis.pattern;
 
+import static java.lang.Math.min;
+
 class patter_1{
   static void rec(int size){
 
@@ -339,12 +341,15 @@ class patter_1{
     }
   }
 
-  static void numSquare(int size){
-    int num = size;
-    for (int i = 0; i < size; i++) {
-      for (int j = 0; j < size; j++) {
-        System.out.print(num);
-        if(i == j) num -= 1;
+  static void concentricSquareNum(int size){
+    for (int i = 0; i < 2*size-1; i++) {
+      for (int j = 0; j < 2*size-1; j++) {
+        int top = i;
+        int left = j;
+        int right = (2*size-2) - j;
+        int bottom = (2*size-2) - i;
+
+        System.out.print(size - (min(min(top, bottom), min(left, right))));
       }System.out.println();
     }
   }
@@ -352,7 +357,7 @@ class patter_1{
   public static void main(String[] args) {
     int size = 5;  
 
-    numSquare(size);
+    concentricSquareNum(size);
 
   }
 }
