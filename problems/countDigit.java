@@ -93,8 +93,26 @@ public class countDigit {
     
   }
 
+  static void primeCheck(int num){
+
+    boolean isPrime = true;
+    for(int i = 2; i*i<= num; i++){
+      if(num%i == 0){
+        isPrime = false;
+        break;
+      }
+    }
+    if(isPrime == true){
+      System.out.println("prime\n");
+
+    }else{
+      System.out.println("not a prime\n");
+    }
+    
+  }
+
   public static void main(String[] args){
-    System.out.println(armstrongNum(371));
+    primeCheck(3);
     // gcd();
   }
 }
