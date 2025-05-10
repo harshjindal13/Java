@@ -13,7 +13,6 @@ class patter_1{
       System.out.println();
     }
   
-
   static void rightT(int size){
     for (int i = 0; i < size; i++) {
         for (int j = 0; j <= i; j++) {
@@ -355,7 +354,7 @@ class patter_1{
   }
 
   public static void main(String[] args) {
-    int size = 5;  
+    int size = 4;  
 
     concentricSquareNum(size);
 
