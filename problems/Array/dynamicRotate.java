@@ -27,19 +27,27 @@ public class dynamicRotate {
     }
   }
 
-  static void divide(int arr[], int n, int k){
-    int left[] = Arrays.copyOfRange(arr, 0, n-k);
-    int right[] = Arrays.copyOfRange(arr, n-k, n);
+  static void divide(int arr[], int n, int k, String rotaionSide){
+    if("right".equals(rotaionSide)){
+      int left[] = Arrays.copyOfRange(arr, 0, n-k);
+      int right[] = Arrays.copyOfRange(arr, n-k, n);
+      printArr(right);
+      printArr(left);
+    }else{
+      int left[] = Arrays.copyOfRange(arr, n-k, n);
+      int right[] = Arrays.copyOfRange(arr, 0, n-k);
 
-    printArr(right);
-    printArr(left);
+      printArr(left);
+      printArr(right);
+    }
+
   }
 
   public static void main(String[] args) {
-    int arr[] = {1,2,3,4,5};
+    int arr[] = {1,2,3,4,5,6,7};
     int n = arr.length;
 
-    divide(arr, n, 2);
+    divide(arr, n, 2, "right");
 
   }
 }
