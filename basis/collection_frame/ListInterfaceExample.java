@@ -50,6 +50,12 @@ public class ListInterfaceExample {
 
 
   public static void main(String[] args) {
+    System.out.println("\n Array list start: \n\n");
+
+    ArrayListExample();
+    System.out.println("\n Linked list start: \n\n");
+    LinkedListExample();
+    System.out.println("\n Stack start: \n\n");
     StackExamples();
   }
 }
