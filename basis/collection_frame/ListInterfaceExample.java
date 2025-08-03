@@ -19,6 +19,22 @@ public class ListInterfaceExample {
 
   }
 
+  static void ArraysFunc(Scanner in){
+
+
+    ArrayList<ArrayList<Integer>> listOfLists = new ArrayList<>();
+    for (int i = 0; i < 3; i++) {
+        listOfLists.add(new ArrayList<>());
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            listOfLists.get(i).add(in.nextInt());
+        }
+    }
+    System.out.println(listOfLists);
+  }
+
   static void LinkedListExample(){
 
     LinkedList<Integer> l = new LinkedList<>();
@@ -50,12 +66,18 @@ public class ListInterfaceExample {
 
 
   public static void main(String[] args) {
-    System.out.println("\n Array list start: \n\n");
 
-    ArrayListExample();
-    System.out.println("\n Linked list start: \n\n");
-    LinkedListExample();
-    System.out.println("\n Stack start: \n\n");
-    StackExamples();
+    try (Scanner in = new Scanner(System.in)) {
+      ArraysFunc(in);
+    }
+    
+
+    // System.out.println("\n Array list start: \n\n");
+
+    // ArrayListExample();
+    // System.out.println("\n Linked list start: \n\n");
+    // LinkedListExample();
+    // System.out.println("\n Stack start: \n\n");
+    // StackExamples();
   }
 }

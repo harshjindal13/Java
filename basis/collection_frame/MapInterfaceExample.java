@@ -26,8 +26,24 @@ public class MapInterfaceExample {
     System.out.println(mp.containsKey(4));
     System.out.println(mp.containsValue("Riya"));
   }
+
+  static void printFreq(int arr[]){
+    int n = arr.length;
+    HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
+    for (int i = 0; i < n; i++) {
+      m.put(arr[i], m.getOrDefault(arr[i], 0) + 1);
+    }
+    for (var x : m.entrySet()) {
+      System.out.println(x.getKey() + " " + x.getValue());
+    }
+    // for (Map.Entry<Integer, Integer> x : m.entrySet()) {
+    //   System.out.println(x.getKey() + " " + x.getValue());
+    // }
+  }
   
   public static void main(String[] args) {
-    HashMapExample();
+    int arr[] = {10, 5, 20, 5, 10, 5};
+
+    printFreq(arr);
   }
 }
