@@ -139,6 +139,40 @@ Output: false */
     return (temp.contains(s));
   }
 
+  public static String sortString(String str){
+    char charArr[] = str.toCharArray();
+    Arrays.sort(charArr);
+
+    return new String(charArr);
+  }
+  
+  public boolean isAnagram(String s, String t) {
+    if(s.length() != t.length()) return false;
+
+    s = sortString(s);
+    t = sortString(t);
+
+    for (int i = 0; i < s.length(); i++) {
+      if(s.charAt(i) != t.charAt(i)) return false;
+    }
+    return true;
+  }
+
+  // remove the outermost paranthesis
+
+  public String removeOuterParentheses(String s) {
+    int counter = 0; String ans = "";
+
+    for(int i = 0; i < s.length(); i++) {
+
+      if(s.charAt(i) == '(') counter++;
+      if(counter != 0) ans += s.charAt(i);
+      if(s.charAt(i) == ')') counter--;
+    }
+
+    return ans;
+  }
+
   public static void main(String[] args) {
     System.out.println(largestOddNumber("132952"));
   }
