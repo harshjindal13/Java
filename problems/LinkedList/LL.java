@@ -1,4 +1,5 @@
-
+import java.util.Stack;
+import java.utils.*;
 public class LL {
 
   private class Node {
@@ -95,6 +96,7 @@ public class LL {
       tail.next = null;
     }
 
+    // Find the middleNode
     public ListNode middleNode(ListNode head) {
       ListNode fast = head, slow = head;
 
@@ -103,11 +105,52 @@ public class LL {
         fast = fast.next.next;
 
       }
-
       return slow;
-
     }
 
+    /*
+    Reverse the LL
+
+    1) traverse the whole LL and put the eles in the stack and after traversal, build the LL with the eles top at the Stack
+
+    2) 2 -> 3 -> 5 -> 6 -> 7 -> null
+        null[prev] <- [temp]  <- [front]
+
+        front = temp.next;
+        temp.next = prev;
+        prev = temp;
+        temp = front;
+
+    */
+
+  public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    ListNode temp1 = headA;      
+    ListNode temp2 = headB;
+
+    Stack<ListNode> st1 = new Stack<>();
+    Stack<ListNode> st2 = new Stack<>();
+    
+    while (temp1 != null) {
+      st1.add(temp1.data);
+      temp1 = temp1.next;
+    }
+
+    while (temp2 != null) {
+      st2.add(temp2.data);
+      temp2 = temp2.next;
+    }
+
+    ListNode value = null;
+
+    while (st1.peek() == st2.peek()) {
+      value = st1.peek();
+      st1.pop();
+      st2.pop();
+    }
+
+    return value;
+
+  }
   public static void main(String[] args) {
     LL first = new LL();
     first.insertFirst(1);
